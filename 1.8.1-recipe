@@ -1,0 +1,8 @@
+bootstrap: docker
+from: reslp/funannotate:1.8.1
+
+%post
+
+cd /usr/local/lib/python3.7/dist-packages/funannotate/aux_scripts
+
+sed -i 's:^#!/usr/bin/env python:#!/usr/bin/env python3:' *.py
